@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eshequ.reconciliation.mapper.SpServeOtherTradeMapper">
+  <resultMap id="BaseResultMap" type="com.eshequ.reconciliation.model.SpServeOtherTrade">
+    <id column="TRADE_WATER_ID" jdbcType="BIGINT" property="tradeWaterId" />
+    <result column="MERGER_STATUS" jdbcType="CHAR" property="mergerStatus" />
+    <result column="TRAN_AMT" jdbcType="DECIMAL" property="tranAmt" />
+    <result column="PAY_METHOD" jdbcType="CHAR" property="payMethod" />
+    <result column="TRAN_DATE" jdbcType="CHAR" property="tranDate" />
+    <result column="TRAN_TIME" jdbcType="CHAR" property="tranTime" />
+    <result column="NEED_INVOICE" jdbcType="CHAR" property="needInvoice" />
+    <result column="WEB_USER_ID" jdbcType="BIGINT" property="webUserId" />
+    <result column="SIGNATURE" jdbcType="VARCHAR" property="signature" />
+    <result column="CSP_ID" jdbcType="BIGINT" property="cspId" />
+    <result column="SECT_ID" jdbcType="BIGINT" property="sectId" />
+    <result column="FROM_SYS" jdbcType="VARCHAR" property="fromSys" />
+    <result column="PLAT_CHANNEL" jdbcType="CHAR" property="platChannel" />
+    <result column="PAY_SCENARIOS" jdbcType="CHAR" property="payScenarios" />
+    <result column="CSP_STAFF_ID" jdbcType="BIGINT" property="cspStaffId" />
+    <result column="STAFF_NAME" jdbcType="VARCHAR" property="staffName" />
+    <result column="IS_REFUNDED" jdbcType="CHAR" property="isRefunded" />
+    <result column="TEL" jdbcType="VARCHAR" property="tel" />
+    <result column="START_DATE" jdbcType="CHAR" property="startDate" />
+    <result column="END_DATE" jdbcType="CHAR" property="endDate" />
+    <result column="OTHER_FEE_ID" jdbcType="BIGINT" property="otherFeeId" />
+    <result column="MNG_CELL_ID" jdbcType="BIGINT" property="mngCellId" />
+    <result column="CARD_TYPE" jdbcType="CHAR" property="cardType" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="owner_consult_amt" jdbcType="DECIMAL" property="ownerConsultAmt" />
+  </resultMap>
+</mapper>
