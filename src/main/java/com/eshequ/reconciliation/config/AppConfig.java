@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
+import com.eshequ.reconciliation.codes.PlatChannel;
 import com.eshequ.reconciliation.mapper.SpServeBillPayTradeMapper;
 import com.eshequ.reconciliation.model.SpServeBillPayTrade;
 
@@ -30,11 +31,14 @@ public class AppConfig implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+		System.out.println(2<<8);
 		System.out.println("hello world");
 		Long trade_water_id = 190307210720913163l;
 		SpServeBillPayTrade trade = new SpServeBillPayTrade();
 		trade = spServeBillPayTradeMapper.selectByPrimaryKey(trade_water_id);
 		System.out.println(trade.toString());
+		
+		System.out.println(PlatChannel.Weixin.toString());
 	}
 	
 }
