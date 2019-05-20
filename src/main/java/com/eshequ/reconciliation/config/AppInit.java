@@ -1,5 +1,7 @@
 package com.eshequ.reconciliation.config;
 
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -39,7 +41,6 @@ public class AppInit implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		System.out.println(2<<8);
 		System.out.println("hello world");
 		Long trade_water_id = 190307210720913163l;
 		SpServeBillPayTrade trade = new SpServeBillPayTrade();
@@ -47,8 +48,10 @@ public class AppInit implements CommandLineRunner {
 		System.out.println(trade.toString());
 		
 		System.out.println(objectMapper.writeValueAsString(PlatChannel.getCodeList()));
+//		http://localhost:8080/shanghai/servplat/login.do?device_id=N7NL00373531&password=1bbd886460827015e5d605ed44252251
 		
-		
+		String resp = restTemplate.getForObject("http://localhost:8080/shanghai/servplat/login.do?device_id=N7NL00373531&password=1bbd886460827015e5d605ed44252251", String.class, new HashMap<>());
+		System.out.println(resp);
 	}
 	
 }
