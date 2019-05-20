@@ -1,6 +1,7 @@
 package com.eshequ.reconciliation.config;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -52,6 +53,9 @@ public class AppInit implements CommandLineRunner {
 		
 		String resp = restTemplate.getForObject("http://localhost:8080/shanghai/servplat/login.do?device_id=N7NL00373531&password=1bbd886460827015e5d605ed44252251", String.class, new HashMap<>());
 		System.out.println(resp);
+		
+		List<?> list = spServeBillPayTradeMapper.selectBillTradeWater("190312172715963689");
+		System.out.println(objectMapper.writeValueAsString(list));
 	}
 	
 }

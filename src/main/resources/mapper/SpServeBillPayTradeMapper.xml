@@ -22,4 +22,11 @@
     <result column="CARD_TYPE" jdbcType="CHAR" property="cardType" />
     <result column="owner_consult_amt" jdbcType="DECIMAL" property="ownerConsultAmt" />
   </resultMap>
+  
+  <select id="selectBillTradeWater" parameterType="string" resultType="hashmap">
+  	select t.trade_water_id, w.fee_water_id from sp_serve_bill_pay_trade t 
+  	left join sp_serve_fee_water w on t.trade_water_id = w.trade_water_id
+  	where t.trade_water_id = #{trade_water_id}
+  
+  </select>
 </mapper>

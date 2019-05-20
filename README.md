@@ -1,16 +1,16 @@
 # reconciliation
-¶ÔÕË¡¢ÇåËãÄ£¿éµÄÖØ¹¹
+å¯¹è´¦ã€æ¸…ç®—æ¨¡å—çš„é‡æ„
 
-¿ª·¢×¢ÒâÊÂÏî£º
-1.pomÎÄ¼şÖĞÌí¼Ó<dependency></dependency>Ê±£¬²»ÒªĞ´ÈëÈ·ÇĞ°æ±¾ºÅ£¬ÓÃÕ¼Î»·û´úÌæ£¬ÀıÈç£º${springboot.version}¡£¾ßÌå°æ±¾ÔÚ<properties></properties>±êÇ©ÏÂ¶¨Òå¡£
-2.ÓÃmabatis·´Ïò¹¤³Ì¹¤¾ßÉú³ÉÊµÌåºÍmapperµÄ£¬ÇëĞŞ¸ÄresourcesÎÄ¼şÏÂµÄgeneratorConfig.xml¡£È»ºóÔÚUtil°üÏÂÕÒµ½MybatisGeneratorUtillÕâ¸öÀà£¬Ö´ĞĞmainº¯Êı¡£
-3.Mybatis·´Ïò¹¤³ÌÓÉÓÚgeneratorConfig.xmlÎÄ¼şÉèÖÃÁËÊôĞÔmodelOnly£¬²»»á×Ô¶¯Éú³ÉSQL¼°Æä¶ÔÓ¦µÄmapper£¬Çë×ÔĞĞ´´½¨¸ÃÊµÌå¶ÔÓ¦µÄMapperÎÄ¼ş²¢¼Ì³Ğcom.eshequ.msa.common.CommonMapper¡£
-  Èç¹ûĞèÒªÊ¹ÓÃselectByPrimaryKey¡¢updateByPrimaryKeyµÄÇëÔÚ×Ô¶¯Éú³ÉµÄÊµÌåÉÏ×¢Èë@ID£¬²»È»Ê¶±ğ²»µ½Ö÷¼ü¡£
-4.µ¥Ôª²âÊÔÇëÔÚsrc/test/javaÄ¿Â¼ÏÂĞ´²âÊÔÓÃÀı¡£
-5.Ê¹ÓÃmaven±àÒëÊ±¿ÉÒÔÓÃ¹«Ë¾µÄmaven²Ö¿â£¬ËÙ¶È»á±È½Ï¿ì¡£²Ö¿âµØÖ·:http://svn-service.chinacloudapp.cn:8081/nexus/content/groups/public/
-6.ÅĞ¶Ï·Ç¿ÕÒ»ÂÉÊ¹ÓÃOjbectUtil.isEmpty();
-7.Ê±¼äÏà¹Øº¯Êıµ÷ÓÃDateUtil¹¤¾ß°ü
-8.¶ÔÏóÓëJson»¥»»ÇëÊ¹ÓÃObjectMapper¡£ObjectMapper²»Òª×Ô¼ºnew£¬×¢Èë¼´¿É¡£Ïß³Ì°²È«¡£Ê¹ÓÃ·½·¨£º
-  Someobj somObj = objectMapper.readValue(respJson, Someobj.class);	//json ×ª¶ÔÏó
-  String requestJsonStr = mapper.writeValueAsString(map);	// ¶ÔÏó×ªjson
-9.»ù±¾httpµ÷ÓÃÇëÊ¹ÓÃrestTemplate
+å¼€å‘æ³¨æ„äº‹é¡¹ï¼š
+1.pomæ–‡ä»¶ä¸­æ·»åŠ <dependency></dependency>æ—¶ï¼Œä¸è¦å†™å…¥ç¡®åˆ‡ç‰ˆæœ¬å·ï¼Œç”¨å ä½ç¬¦ä»£æ›¿ï¼Œä¾‹å¦‚ï¼š${springboot.version}ã€‚å…·ä½“ç‰ˆæœ¬åœ¨<properties></properties>æ ‡ç­¾ä¸‹å®šä¹‰ã€‚
+2.ç”¨mabatisåå‘å·¥ç¨‹å·¥å…·ç”Ÿæˆå®ä½“å’Œmapperçš„ï¼Œè¯·ä¿®æ”¹resourcesæ–‡ä»¶ä¸‹çš„generatorConfig.xmlã€‚ç„¶ååœ¨UtilåŒ…ä¸‹æ‰¾åˆ°MybatisGeneratorUtillè¿™ä¸ªç±»ï¼Œæ‰§è¡Œmainå‡½æ•°ã€‚
+3.Mybatisåå‘å·¥ç¨‹ç”±äºgeneratorConfig.xmlæ–‡ä»¶è®¾ç½®äº†å±æ€§modelOnlyï¼Œä¸ä¼šè‡ªåŠ¨ç”ŸæˆSQLåŠå…¶å¯¹åº”çš„mapperï¼Œè¯·è‡ªè¡Œåˆ›å»ºè¯¥å®ä½“å¯¹åº”çš„Mapperæ–‡ä»¶å¹¶ç»§æ‰¿com.eshequ.msa.common.CommonMapperã€‚
+  å¦‚æœéœ€è¦ä½¿ç”¨selectByPrimaryKeyã€updateByPrimaryKeyçš„è¯·åœ¨è‡ªåŠ¨ç”Ÿæˆçš„å®ä½“ä¸Šæ³¨å…¥@IDï¼Œä¸ç„¶è¯†åˆ«ä¸åˆ°ä¸»é”®ã€‚
+4.å•å…ƒæµ‹è¯•è¯·åœ¨src/test/javaç›®å½•ä¸‹å†™æµ‹è¯•ç”¨ä¾‹ã€‚
+5.ä½¿ç”¨mavenç¼–è¯‘æ—¶å¯ä»¥ç”¨å…¬å¸çš„mavenä»“åº“ï¼Œé€Ÿåº¦ä¼šæ¯”è¾ƒå¿«ã€‚ä»“åº“åœ°å€:http://svn-service.chinacloudapp.cn:8081/nexus/content/groups/public/
+6.åˆ¤æ–­éç©ºä¸€å¾‹ä½¿ç”¨OjbectUtil.isEmpty();
+7.æ—¶é—´ç›¸å…³å‡½æ•°è°ƒç”¨DateUtilå·¥å…·åŒ…
+8.å¯¹è±¡ä¸Jsonäº’æ¢è¯·ä½¿ç”¨ObjectMapperã€‚ObjectMapperä¸è¦è‡ªå·±newï¼Œæ³¨å…¥å³å¯ã€‚çº¿ç¨‹å®‰å…¨ã€‚ä½¿ç”¨æ–¹æ³•ï¼š
+  Someobj somObj = objectMapper.readValue(respJson, Someobj.class);	//json è½¬å¯¹è±¡
+  String requestJsonStr = mapper.writeValueAsString(map);	// å¯¹è±¡è½¬json
+9.åŸºæœ¬httpè°ƒç”¨è¯·ä½¿ç”¨restTemplate
