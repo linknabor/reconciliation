@@ -13,3 +13,4 @@
 8.对象与Json互换请使用ObjectMapper。ObjectMapper不要自己new，注入即可。线程安全。使用方法：
   Someobj somObj = objectMapper.readValue(respJson, Someobj.class);	//json 转对象
   String requestJsonStr = mapper.writeValueAsString(map);	// 对象转json
+9.基本http调用请使用restTemplate
