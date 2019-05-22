@@ -14,3 +14,4 @@
   Someobj somObj = objectMapper.readValue(respJson, Someobj.class);	//json 转对象
   String requestJsonStr = mapper.writeValueAsString(map);	// 对象转json
 9.基本http调用请使用restTemplate
+10.业务处理类放在service包下
